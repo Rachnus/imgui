@@ -3816,7 +3816,7 @@ void ImGui::NewFrame()
     // We don't use "Debug" to avoid colliding with user trying to create a "Debug" window with custom flags.
     // This fallback is particularly important as it avoid ImGui:: calls from crashing.
     SetNextWindowSize(ImVec2(400,400), ImGuiCond_FirstUseEver);
-    Begin("Debug##Default");
+    Begin("Debug##Default", NULL, ImGuiWindowFlags_NoFocusOnAppearing);
     g.FrameScopePushedImplicitWindow = true;
 
 #ifdef IMGUI_ENABLE_TEST_ENGINE
